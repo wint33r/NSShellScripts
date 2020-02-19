@@ -2,7 +2,7 @@
 ProtocolVer=(ssl2 ssl3 tls1 tls1_1 tls1_2)
 CipherList=(SRP-DSS-AES-256-CBC-SHA SRP-RSA-AES-256-CBC-SHA SRP-AES-256-CBC-SHA SRP-RSA-AES-128-CBC-SHA SRP-DSS-AES-128-CBC-SHA SRP-RSA-AES-128-CBC-SHA SRP-AES-128-CBC-SHA)
 #CipherList=$(openssl ciphers 'ALL:eNULL')
-Hosts=("sf.shonky.int")
+Hosts=("blah.blah.blah")
 Port=443
 for Host in ${Hosts[@]}; do
     for Protocol in ${ProtocolVer[@]}; do
