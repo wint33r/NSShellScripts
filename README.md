@@ -1,5 +1,5 @@
             ~~~           
-           (-_-)          shell scripts for Citrix ADC né NetScaler 
+           (-_-)          shell scripts for Citrix ADC (né NetScaler) 
            (\x/)                 
            |-.-|          #RIPNetScaler
            
