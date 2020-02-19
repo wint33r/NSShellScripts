@@ -3,4 +3,4 @@
            (\x/)                 
            |-.-|          #RIPNetScaler
            
-###### A Collextion of random shell scripts for doing stuff on a NetScaler
+###### A Collection of random shell scripts for doing stuff on a NetScaler
