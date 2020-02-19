@@ -1,0 +1,17 @@
+#!/bin/bash
+ProtocolVer=(ssl2 ssl3 tls1 tls1_1 tls1_2)
+CipherList=(SRP-DSS-AES-256-CBC-SHA SRP-RSA-AES-256-CBC-SHA SRP-AES-256-CBC-SHA SRP-RSA-AES-128-CBC-SHA SRP-DSS-AES-128-CBC-SHA SRP-RSA-AES-128-CBC-SHA SRP-AES-128-CBC-SHA)
+#CipherList=$(openssl ciphers 'ALL:eNULL')
+Hosts=("sf.shonky.int")
+Port=443
+for Host in ${Hosts[@]}; do
+    for Protocol in ${ProtocolVer[@]}; do
+        for Cipher in ${CipherList[@]}; do
+            echo HEAD / HTTP/1.1 | openssl s_client -connect $Host:$Port -cipher $Cipher -$Protocol /dev/null > 2>&1
+            if [$? -eq 0]; then 
+                echo -e "Connected: $Host:$Port\t $Protocol $Cipher "
+                Success=1
+            fi
+        done
+    done
+done
