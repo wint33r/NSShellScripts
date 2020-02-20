@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 ProtocolVer=(ssl2 ssl3 tls1 tls1_1 tls1_2)
 CipherList=(AES256-SHA DHE-RSA-AES128-SHA DHE-RSA-AES256-SHA AES128-SHA)
 #CipherList=$(openssl ciphers 'ALL:eNULL')
