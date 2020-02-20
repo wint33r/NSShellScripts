@@ -7,7 +7,7 @@ Port=443
 for Host in ${Hosts[@]}; do
     for Protocol in ${ProtocolVer[@]}; do
         for Cipher in ${CipherList[@]}; do
-            echo HEAD / HTTP/1.1 | openssl s_client -connect $Host:$Port -cipher $Cipher -$Protocol /dev/null > 2>&1
+            echo HEAD / HTTP/1.1 | openssl s_client -connect $Host:$Port -cipher $Cipher -$Protocol > /dev/null > 2>&1
             if [ $? -eq 0 ]; then 
                 echo -e "Connected: $Host:$Port\t $Protocol $Cipher "
                 Success=1
